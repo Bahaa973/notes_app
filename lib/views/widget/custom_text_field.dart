@@ -21,12 +21,12 @@ class CustomTextField extends StatelessWidget {
         }
       },
       maxLines: maxLines,
-      cursorColor: KPrimaryColor,
+      cursorColor: kPrimaryColor,
       decoration: InputDecoration(
         hintText: hint,
         border: buildBorder(),
         enabledBorder: buildBorder(),
-        focusedBorder: buildBorder(color: KPrimaryColor),
+        focusedBorder: buildBorder(color: kPrimaryColor),
       ),
     );
   }
