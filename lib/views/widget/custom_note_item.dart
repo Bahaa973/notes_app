@@ -42,6 +42,7 @@ final NoteModel note;
               ),
               trailing: IconButton(
                 onPressed: () {
+                  note.delete();
 
                 },
                 icon: const Icon(
