@@ -18,18 +18,18 @@ class CustomButton extends StatelessWidget {
         ),
         child: isLoading
             ? const SizedBox(
-                height: 24,
-                width: 24,
-                child: CircularProgressIndicator(
-                  color: Colors.black,
-                ),
-              )
+          height: 24,
+          width: 24,
+          child: CircularProgressIndicator(
+            color: Colors.black,
+          ),
+        )
             : const Text(
-                'Add',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
-              ));
+          'Add',
+          style: TextStyle(
+              color: Colors.black,
+              fontSize: 20,
+              fontWeight: FontWeight.bold),
+        ));
   }
 }

@@ -6,13 +6,17 @@ import 'package:notes_app/views/edit_note_view.dart';
 
 class NoteItem extends StatelessWidget {
   const NoteItem({super.key, required this.note});
-final NoteModel note;
+
+  final NoteModel note;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return  EditNoteView(note: note,);
+          return EditNoteView(
+            note: note,
+          );
         }));
       },
       child: Container(
@@ -25,7 +29,7 @@ final NoteModel note;
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title:  Text(
+              title: Text(
                 note.title,
                 style: const TextStyle(
                   fontSize: 26,
@@ -33,7 +37,7 @@ final NoteModel note;
                 ),
               ),
               subtitle: Padding(
-                padding:  const EdgeInsets.only(top: 16, bottom: 16),
+                padding: const EdgeInsets.only(top: 16, bottom: 16),
                 child: Text(
                   note.subTitle,
                   style: TextStyle(
@@ -46,14 +50,12 @@ final NoteModel note;
                 onPressed: () {
                   note.delete();
                   BlocProvider.of<NotesCubit>(context).fetchAllNotes();
-
                 },
                 icon: const Icon(
                   Icons.delete,
                   size: 24,
                   color: Colors.black,
                 ),
-
               ),
             ),
             Padding(
